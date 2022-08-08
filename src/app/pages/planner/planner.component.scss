@@ -1,0 +1,126 @@
+.planner-section {
+  display: flex;
+  min-height: 100vh;
+  background-color: #1b1f26;
+  justify-content: center;
+  background-image: url("images/todo.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+
+}
+
+.planner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(34, 250, 235, 0.7);
+  padding: 20px;
+  width: 500px;
+  height: fit-content;
+  border-radius: 20px;
+  margin-top: 2rem;
+  box-shadow: rgb(31, 183, 175, 0.5) 0 14px 28px, rgba(0, 0, 0, 0.22) 0 10px 10px;
+}
+
+.planner-input {
+
+  width: 100%;
+  text-decoration: none;
+  background-color: white;
+  color: #494545;
+  font-size: larger;
+  display: inline-block;
+  padding: 5px 20px;
+  position: relative;
+  border: 3px solid #1e232c;
+  border-radius: 20px;
+}
+
+.planner-actions {
+  display: flex;
+  gap: 20px;
+}
+
+.planner-add-button {
+  font-weight: bold;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  background-color: #1e232c;
+  color: white;
+  display: inline-block;
+  padding: 5px 20px;
+  position: relative;
+  border: 3px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  &:hover {
+    background-color: #f5b607;
+  }
+}
+
+.planner-tasks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.planner-task {
+  background-color: #9be3d0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.planner-title {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.delete-task-button {
+  background-color: #1e232c;
+  color: white;
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    background-color: red;
+  }
+}
+
+.clear-all-button {
+  font-size: 1em;
+  background-color: #1e232c;
+  color: white;
+  display: inline-block;
+  padding: 5px 20px;
+  position: relative;
+  border: 3px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  &:hover {
+    background-color: red;
+  }
+}
+
+.task-finished {
+  background-color: #9ce5d2;
+  color: #494545;
+}
+
+.pending-finished-containers {
+  padding: 5px 10px;
+  background-color: transparent;
+}
+
+.scale-up-center {
+  animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}

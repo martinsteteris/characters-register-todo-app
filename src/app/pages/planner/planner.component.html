@@ -1,0 +1,29 @@
+<section class="planner-section">
+  <div class="planner">
+    <h1 class="planner-title">Plan your day!</h1>
+    <div class="planner-actions">
+      <input [(ngModel)]="taskInputValue" (keydown.enter)="addTask()" type="text" placeholder="Add new task" class="planner-input" />
+      <button class="planner-add-button" (click)="addTask()">Add</button>
+    </div>
+
+    <div class="planner-tasks-container scale-up-center">
+      <div class="planner-task " *ngFor="let task of tasksToDo; let i = index">
+        <span>{{ i + 1 }}. {{task}}</span>
+        <button class="delete-task-button" (click)="deleteTask(i)">X</button>
+
+      </div>
+    </div>
+    <div class="planner-task pending-finished-containers">
+      <span>You have {{tasksToDo.length}} tasks pending.</span>
+      <button *ngIf="tasksToDo.length > 0" class="clear-all-button" (click)="clearAll()">Clear All</button>
+    </div>
+    <div class="planner-task task-finished" *ngFor="let task of tasksFinished">
+      <span><del>{{task}}</del></span>
+    </div>
+    <div class="planner-task task-finished pending-finished-containers" *ngIf="tasksFinished.length > 0">
+      <span> {{tasksFinished.length}} tasks finished!</span>
+      <button *ngIf="tasksFinished.length > 0" class="clear-all-button" (click)="clearFinished()">Clear finished</button>
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,16 @@
+<section class="characters-section">
+  <div class="characters-heading">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg" alt="Rick and morty title">
+  </div>
+  <div class="pagination" pagination-template></div>
+  <div class="characters-list">
+    <div *ngFor="let character of characters" class="character-card">
+      <img class="character-image" id="card-image" src="{{character.image}}" alt="image">
+        <h3> {{character.name}}</h3>
+        <p>Status: {{character.status}}</p>
+        <p>Species: {{character.species}}</p>
+        <p *ngIf="character.type">Type: {{character.type}}</p>
+        <p>Date created:  {{character.created | date: "dd-MM-yyyy"}}</p>
+    </div>
+  </div>
+</section>
